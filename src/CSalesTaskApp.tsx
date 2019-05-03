@@ -8,7 +8,9 @@ import { consts } from './salestask/consts';
 export class CSalesTaskApp extends CApp {
 
     cUqSalesTask: CUq;  
-    protected async internalStart() {
+    
+    protected async internalStart(param:any) {
         this.cUqSalesTask = this.getCUq(consts.uqSalesTask);
-        }
+        await super.internalStart(param);
     }
+}
